@@ -84,3 +84,21 @@ function closeMenu() {
   sideMenu.style.right = "-50%";
 }
 // Navbar Side Menu End
+
+// google Sheet
+const scriptURL = "https://script.google.com/macros/s/AKfycbx5M9r5Dyki5et02OCHlLPpvE3HLT152zXia6VZ8aZK8RdCNcuAZmJAU8BLB3RSvNfs4Q/exec";
+const form = document.forms["submit-to-google-sheet"];
+const msg = document.getElementById("msg");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      msg.classList.add("active");
+      setTimeout(function () {
+        msg.classList.remove("active");
+      }, 5000);
+      form.reset();
+    })
+    .catch((error) => console.error("Error!", error.message));
+});

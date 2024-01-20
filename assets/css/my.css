@@ -608,6 +608,20 @@ form .btn2 {
   font-size: 18px;
   cursor: pointer;
 }
+span#msg {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  background: var(--input-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  padding: 10px 40px;
+  font-size: 18px;
+  display: none;
+}
+span#msg.active {
+  display: block;
+}
 .copyright {
   width: 100%;
   text-align: center;
