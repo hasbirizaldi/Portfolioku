@@ -743,10 +743,10 @@ ul .fa-times {
   }
   nav ul {
     background: var(--line);
-    border-left: 20px solid var(--icon-color2);
+    border-left: 5px solid var(--icon-color2);
     position: fixed;
     top: 0;
-    right: -50%;
+    right: -90%;
     width: 40%;
     height: 100vh;
     padding-top: 50px;
@@ -759,7 +759,7 @@ ul .fa-times {
     margin: 35px;
   }
   nav ul li a {
-    font-size: 24px;
+    font-size: 20px;
   }
   .scrollToTop-btn {
     z-index: 1;
@@ -926,10 +926,24 @@ ul .fa-times {
   .home .header-text {
     margin-top: 50%;
   }
-}
-@media only screen and (max-width: 400px) {
-  .home .header-text {
-    margin-top: 70%;
+  .fa-angle-double-down {
+    position: relative;
+    left: 50%;
+    bottom: 20px;
+    font-size: 33px;
+    color: var(--icon-color2);
   }
 }
+@media only screen and (max-width: 400px) {
+  .home {
+    height: 100vh;
+  }
+  .home .header-text {
+    margin-top: 60%;
+  }
+  .fa-angle-double-down {
+    bottom: 20px;
+  }
+}
+
 /* Small Screen End---------------- */
