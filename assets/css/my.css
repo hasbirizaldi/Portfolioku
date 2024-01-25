@@ -5,8 +5,10 @@
   --services-bg-color: #000005;
   --portfolio-bg-color: #141414;
   --nav-color: rgb(0, 0, 0);
+  --nav-bg-color: rgba(0, 0, 0, 0.9);
   --card-bg-color: #262626;
 
+  --img-bg-color: rgba(7, 3, 3, 0);
   --hover-color: hsl(0, 100%, 36%);
 
   --shadow: 5px 5px 14px #757575;
@@ -27,6 +29,9 @@
   --services-bg-color: rgb(240, 228, 228);
   --portfolio-bg-color: #eee;
   --nav-color: #eee;
+  --nav-bg-color: rgba(233, 233, 233, 0.9);
+  --img-bg-color: rgb(231, 210, 210);
+
   --card-bg-color: rgb(216, 215, 215);
 
   --hover-color: #a7002a;
@@ -55,6 +60,7 @@ body {
 }
 .img-profile {
   transition: 0.5s ease;
+  background: var(--img-bg-color);
 }
 .img-profile:hover {
   transform: scale(1.1);
@@ -89,7 +95,7 @@ body {
 #home {
   width: 100%;
   height: 100vh;
-  transition: 1s ease;
+  transition: 2s ease;
   background: var(--header-bg-color);
 }
 .container {
@@ -276,7 +282,7 @@ nav ul li a:hover::after {
 #about {
   padding: 30px 0;
   background: var(--about-bg-color);
-  transition: 1s ease;
+  transition: 2s ease;
   min-height: 100vh;
 }
 .row {
@@ -340,6 +346,7 @@ nav ul li a:hover::after {
   display: none;
   margin-top: 30px;
   color: var(--text-color);
+  transition: 2s ease;
 }
 .tab-contents ul li {
   font-size: 20px;
@@ -366,7 +373,7 @@ nav ul li a:hover::after {
 #services {
   padding: 90px 0;
   background-color: var(--services-bg-color);
-  transition: 1s ease;
+  transition: 3s ease;
   min-height: 100vh;
 }
 #services .sub-title {
@@ -431,7 +438,7 @@ nav ul li a:hover::after {
 #portfolio {
   padding: 90px 0;
   background: var(--portfolio-bg-color);
-  transition: 1s ease;
+  transition: 2s ease;
   min-height: 100vh;
 }
 #portfolio .sub-title {
@@ -520,7 +527,7 @@ nav ul li a:hover::after {
 #contact {
   padding: 90px 0;
   background: var(--services-bg-color);
-  transition: 1s ease;
+  transition: 2s ease;
   min-height: 90vh;
 }
 .contact-left {
@@ -601,6 +608,7 @@ form textarea {
   color: var(--text-color);
   font-size: 18px;
   border-radius: 6px;
+  transition: 1s ease;
 }
 form .btn2 {
   padding: 14px 60px;
@@ -629,7 +637,7 @@ span#msg.active {
   background: var(--portfolio-bg-color);
   font-weight: 400;
   font-size: 16px;
-  transition: 1s ease;
+  transition: 2s ease;
   font-family: "Salsa", cursive;
   color: var(--text-color);
 }
@@ -756,24 +764,27 @@ ul .fa-times {
     margin-right: 20px;
   }
   nav ul {
-    background: var(--line);
-    border-left: 5px solid var(--icon-color2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--nav-bg-color);
     position: fixed;
-    top: 0;
-    right: -90%;
-    width: 40%;
+    bottom: 0;
+    right: -100%;
+    width: 100%;
     height: 100vh;
-    padding-top: 50px;
+    padding-top: 0px;
     z-index: 2;
     transition: right 0.5s ease-in-out;
-    box-shadow: -5px -5px 5px rgb(92, 92, 92);
   }
   nav ul li {
     display: block;
-    margin: 35px;
+    margin: 25px;
   }
   nav ul li a {
-    font-size: 20px;
+    font-size: 26px;
+    font-weight: 800;
   }
   .scrollToTop-btn {
     z-index: 1;
@@ -782,17 +793,19 @@ ul .fa-times {
     position: absolute;
     top: 25px;
     left: 15px;
+    font-size: 32px;
+    font-weight: 800;
     cursor: pointer;
   }
   .btn-theme {
     background: var(--icon-color2);
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -6px;
+    bottom: 2%;
   }
   .btn-theme i.fa-moon {
     color: #fff;

@@ -75,14 +75,23 @@ scrollTopBtn.addEventListener("click", () => {
 
 // Navbar Side Menu
 var sideMenu = document.getElementById("sideMenu");
+var links = document.querySelectorAll("nav ul li a");
+console.log(links);
 
 function openMenu() {
   sideMenu.style.right = "0";
 }
 
 function closeMenu() {
-  sideMenu.style.right = "-50%";
+  sideMenu.style.right = "-100%";
 }
+
+links.forEach((links) => {
+  links.addEventListener("click", () => {
+    sideMenu.style.right = "-100%";
+  });
+});
+
 // Navbar Side Menu End
 
 // google Sheet
