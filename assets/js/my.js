@@ -31,7 +31,6 @@ window.addEventListener("scroll", () => {
     let id = current.getAttribute("id");
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      console.log(id);
       document.querySelector(".navbar a[href*=" + id + "]").classList.add("active");
     } else {
       document.querySelector(".navbar a[href*=" + id + "]").classList.remove("active");
@@ -76,19 +75,23 @@ scrollTopBtn.addEventListener("click", () => {
 // Navbar Side Menu
 var sideMenu = document.getElementById("sideMenu");
 var links = document.querySelectorAll("nav ul li a");
-console.log(links);
+var bars = document.getElementById("bars");
+console.log(bars);
 
 function openMenu() {
   sideMenu.style.right = "0";
+  // bars.style.display = "none";
 }
 
 function closeMenu() {
   sideMenu.style.right = "-100%";
+  // bars.style.display = "block";
 }
 
 links.forEach((links) => {
   links.addEventListener("click", () => {
     sideMenu.style.right = "-100%";
+    // bars.style.display = "block";
   });
 });
 

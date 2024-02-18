@@ -1,4 +1,4 @@
-:root {
+.light {
   --bg-color: #ffffff03;
   --header-bg-color: #000005;
   --about-bg-color: #141414;
@@ -6,9 +6,9 @@
   --portfolio-bg-color: #141414;
   --nav-color: rgb(0, 0, 0);
   --nav-bg-color: rgba(0, 0, 0, 0.9);
+  --img-bg-color: rgba(7, 3, 3, 0);
   --card-bg-color: #262626;
 
-  --img-bg-color: rgba(7, 3, 3, 0);
   --hover-color: hsl(0, 100%, 36%);
 
   --shadow: 5px 5px 14px #757575;
@@ -22,16 +22,15 @@
 
   --input-color: #262626;
 }
-.light {
+:root {
   --bg-color: #08002703;
-  --header-bg-color: rgb(240, 228, 228);
+  --header-bg-color: rgb(233, 217, 217);
   --about-bg-color: #eee;
   --services-bg-color: rgb(240, 228, 228);
   --portfolio-bg-color: #eee;
   --nav-color: #eee;
   --nav-bg-color: rgba(233, 233, 233, 0.9);
   --img-bg-color: rgb(231, 210, 210);
-
   --card-bg-color: rgb(216, 215, 215);
 
   --hover-color: #a7002a;
@@ -56,7 +55,7 @@
 body {
   background-color: var(--bg-color);
   font-family: "Poppins", sans-serif;
-  color: #fff;
+  color: #000;
 }
 .img-profile {
   transition: 0.5s ease;
@@ -406,9 +405,10 @@ nav ul li a:hover::after {
 }
 .services-list div h2 {
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 15px;
   color: var(--text-color);
+  text-align: center;
 }
 .services-list p {
   color: var(--text-color);
@@ -478,6 +478,7 @@ nav ul li a:hover::after {
   text-align: center;
   font-size: 14px;
   transition: height 0.5s ease;
+  color: #fff;
 }
 .layer h3 {
   font-weight: 500;
@@ -498,6 +499,14 @@ nav ul li a:hover::after {
   height: 50px;
   border-radius: 50%;
   text-align: center;
+  transition: 0.5s ease;
+}
+.layer .links a p {
+  color: #fff;
+  font-size: 16px;
+}
+.layer .links a:hover {
+  transform: scale(1.09);
 }
 .project:hover img {
   transform: scale(1.1);
