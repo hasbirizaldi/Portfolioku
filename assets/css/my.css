@@ -479,6 +479,7 @@ nav ul li a:hover::after {
   font-size: 14px;
   transition: height 0.5s ease;
   color: #fff;
+  border: 1px solid #000;
 }
 .layer h3 {
   font-weight: 500;
@@ -529,6 +530,11 @@ nav ul li a:hover::after {
 .btn:hover {
   background: var(--hover-color);
   color: #fff;
+}
+.project img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 /* Portfolio End */
 
